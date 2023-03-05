@@ -21,7 +21,7 @@ def speak(text: str):
     -------
     None
     """
-    tts = gtts.gTTS(text)
+    tts = gtts.gTTS(text, lang="en", tld="us")
     mp3_fp = BytesIO()
     tts.write_to_fp(mp3_fp)
     mp3_fp.seek(0)
