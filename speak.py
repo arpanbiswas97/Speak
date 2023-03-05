@@ -34,9 +34,14 @@ def speak(text: str):
         pass
 
 
-parser = argparse.ArgumentParser("speak", description="Speaks the text out loud")
-parser.add_argument("text")
-args = parser.parse_args()
+def main():
+    parser = argparse.ArgumentParser("speak", description="Speaks the text out loud using Google Text-to-Speech")
+    parser.add_argument("text")
+    args = parser.parse_args()
 
-text = args.text
-speak(text)
+    text = args.text
+    speak(text)
+
+
+if __name__ == "__main__":
+    main()
